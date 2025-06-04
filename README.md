@@ -48,12 +48,12 @@ The CNN is built using the Keras `Sequential` API:
 
 ## Results
 - **Training Performance**:
-  - Final Training Accuracy: ~0.9918
-  - Final Validation Accuracy: ~0.9986
-  - Final Training Loss: ~0.0978
-  - Final Validation Loss: ~0.0717
-- **Optimal Capacity**: Epoch with highest validation accuracy (e.g., epoch 8).
-- **Test Performance**: Achieved 96.96% accuracy on the test set.
+  - Final Training Accuracy: ~0.9639
+  - Final Validation Accuracy: ~0.9939
+  - Final Training Loss: ~0.2012
+  - Final Validation Loss: ~0.1190
+- **Optimal Capacity**: Epoch with highest validation accuracy (e.g., epoch 10).
+- **Test Performance**: Achieved 95.21% accuracy on the test set.
 
 ## Dependencies
 - Python 3.x
@@ -76,26 +76,28 @@ The CNN is built using the Keras `Sequential` API:
 3. Update the `path` variable in the script to point to your dataset directory.
 
 ## Usage
-1. Place the dataset in `E:\\Traffic Sign Image Classification` or update the `path` variable.
+1. Update the `BASE_PATH` variable.
 2. Run the script:
    ```bash
-   python traffic_sign_classification.py
+   python train_traffic_sign_model.ipynb
+   python predict_traffic_signs.ipynb
    ```
 3. The script will:
    - Load and preprocess the dataset.
-   - Train the CNN model and save it as `my_model.h5`.
+   - Train the CNN model and save it as `traffic_sign_model.h5`.
    - Evaluate the model on the test set.
    - Generate visualizations (class distribution histogram, training curves, and sample predictions).
 
 ## Project Structure
 ```
 Traffic_Sign_Classification/
-├── Train/                    # Training images in class subfolders
-├── Test/                     # Test images
-├── Test.csv                  # Test image paths and labels
-├── TICK (1).ipynb           # Jupyter notebook with the code
-├── my_model.h5              # Trained model (generated after training)
-└── README.md                # This file
+├── Train/                           # Training images in class subfolders
+├── Test/                            # Test images
+├── Test.csv                         # Test image paths and labels
+├── train_traffic_sign_model.ipynb   # Jupyter notebook with the code
+├── predict_traffic_signs.ipynb      # Jupyter notebook with the code
+├── traffic_sign_model.h5            # Trained model (generated after training)
+└── README.md                        # This file
 ```
 
 ## Notes
