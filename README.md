@@ -80,12 +80,11 @@ The CNN is built using the Keras `Sequential` API:
 2. Run the script:
    ```bash
    python train_traffic_sign_model.ipynb
-  
-2. Run the script:
-  ```bash
+   ```
+   ```bash
    python predict_traffic_signs.ipynb
    ```
-3. The script will:
+4. The script will:
    - Load and preprocess the dataset.
    - Train the CNN model and save it as `traffic_sign_model.h5`.
    - Evaluate the model on the test set.
