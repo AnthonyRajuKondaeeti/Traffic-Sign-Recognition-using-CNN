@@ -4,7 +4,7 @@
 This project implements a **Convolutional Neural Network (CNN)** using TensorFlow/Keras to classify traffic sign images into 43 distinct categories. The dataset is sourced from a traffic sign classification dataset, and the project includes data preprocessing, augmentation, model training, evaluation, and visualization of results.
 
 ## Dataset
-The dataset is located at `E:\\Traffic Sign Image Classification` and consists of:
+The dataset consists of:
 - **Training Set**: Images organized in subfolders under `Train/`, each representing one of 43 classes.
 - **Test Set**: Image paths and labels provided in `Test.csv`.
 - **Class Distribution**: The dataset is imbalanced, e.g., "Speed Limit 50" has 2250 images, while "Speed Limit 20" has 210 images. A histogram visualizes this distribution.
@@ -13,7 +13,7 @@ The dataset is located at `E:\\Traffic Sign Image Classification` and consists o
 The 43 classes include various traffic signs, such as:
 - Speed Limit signs (20, 30, 50, etc.)
 - No Overtaking, Stop, Give Way, Roundabout, etc.
-- A dictionary (`label_name`) maps class IDs (0–42) to descriptive names.
+- A dictionary (`LABLE_NAMES`) maps class IDs (0–42) to descriptive names.
 
 ## Preprocessing
 - **Image Processing**:
@@ -42,9 +42,9 @@ The CNN is built using the Keras `Sequential` API:
 ## Evaluation
 - The model is evaluated on the test set with preprocessed images.
 - **Metrics**:
-  - Test Loss: 0.2171
-  - Test Accuracy: 0.9696
-- **Visualization**: Training/validation accuracy and loss curves are plotted, and 10 random test images are displayed with true and predicted labels.
+  - Test Loss: 0.3310
+  - Test Accuracy: 0.9521
+- **Visualization**: Training/validation accuracy and loss curves are plotted.
 
 ## Results
 - **Training Performance**:
@@ -80,6 +80,9 @@ The CNN is built using the Keras `Sequential` API:
 2. Run the script:
    ```bash
    python train_traffic_sign_model.ipynb
+  
+2. Run the script:
+  ```bash
    python predict_traffic_signs.ipynb
    ```
 3. The script will:
@@ -101,10 +104,9 @@ Traffic_Sign_Classification/
 ```
 
 ## Notes
-- **Class Imbalance**: Consider class weights or further augmentation for underrepresented classes.
 - **Model Improvements**: Experiment with deeper architectures or hyperparameter tuning for better performance.
 - **Hardware**: A GPU is recommended for faster training.
-- **Model Saving Warning**: The script uses the legacy HDF5 format (`my_model.h5`). Consider using the native Keras format (`my_model.keras`) for future compatibility.
+- **Model Saving Warning**: The script uses the legacy HDF5 format (`traffic_sign_model.h5`). Consider using the native Keras format (`traffic_sign_model.keras`) for future compatibility.
 
 ## License
 This project is licensed under the MIT License.
